@@ -2,9 +2,21 @@
 
 namespace App\Models;
 
+use illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Testing\Fluent\Concerns\Has;
 
 class RoomImage extends Model
 {
-    //
+    use HasFactory;
+
+    protected $fillable = [
+        'room_id',
+        'image',
+    ];
+
+    public function room()
+    {
+        return $this->belongsTo(Room::class);  
+    }
 }
