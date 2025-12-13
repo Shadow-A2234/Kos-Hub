@@ -18,6 +18,7 @@ class BoardingHouse extends Model
         'description',
         'price',
         'address',
+        
     ];
 
     public function city()
